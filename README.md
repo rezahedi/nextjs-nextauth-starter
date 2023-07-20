@@ -2,6 +2,8 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![Homepage Screenshot](https://github.com/rezahedi/nextjs-nextauth-starter/blob/main/public/Screenshot_2023-07-19_180913.png)
+
 ## Getting Started
 
 First, run the development server:
