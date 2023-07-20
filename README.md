@@ -1,3 +1,5 @@
+# Next.js Next-Auth Starter Template
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -14,21 +16,16 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project have two [Routing Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups) `(home)` and `(admin)` to have multiple root layouts for each. You can start editing the home page by modifying `app/(home)/page.tsx`. The page auto-updates as you edit the file.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+This project build by [Next.js 13](https://nextjs.org/docs/app) [APP Router](https://nextjs.org/docs/app/building-your-application/routing#the-app-router), using [NextAuth](https://next-auth.js.org/getting-started/introduction) for authentication, [Modal Intercepting Routing](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes) for `/login` modal or route, and styled by Tailwind. This project also included a sample protected route and sub-routes too, It is useful for making admin dashboard. I used [Route Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups) to make multiple root layouts for each of home page and admin dashboard separatly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I made this project to help me understand how to use Next.js 13 APP Router structure and how to setup NextAuth, also to have a simple starter template for my future projects that need authentication.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Upcoming actions:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Implement authorization for API routes.
+- Utilize the Prisma provider for efficient token and user management.
+- Incorporate a secure Login with email / password functionality.
