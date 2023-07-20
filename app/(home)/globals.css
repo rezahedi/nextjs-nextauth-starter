@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #190b04;
+  --background: #f9eed7;
+  --background2: #f1e9b3;
+  --accent: #d13107;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #f9eed7;
+    --background: #190b04;
+    --background2: #190b04;
+    --accent: #d13107;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(var(--background), var(--background2));
+}
+.container {
+  @apply p-4 max-w-6xl;
+}
+header {
+  @apply flex items-center justify-between py-10;
+}
+header h1 {
+  @apply text-4xl text-[var(--accent)];
+}
+header nav {
+  @apply flex gap-2 items-center;
+}
+header nav a {
+  @apply rounded-full p-3 px-4 hover:underline;
+}
+.user-profile {
+  @apply rounded-full flex items-center gap-2 p-3 px-8 bg-[var(--accent)] text-red-50;
+}
+main {
+  @apply py-10 flex flex-col gap-4;
+}
+main a {
+  @apply underline;
+}
+footer {
+  @apply py-10 text-center;
+}
+.login {
+  @apply flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0;
+}
+.login div {
+  @apply w-full rounded-2xl shadow md:mt-0 sm:max-w-md bg-[var(--foreground)] text-[var(--background)] dark:bg-[var(--foreground)] dark:text-[var(--background)] flex gap-4 flex-col items-center p-16 max-sm:px-6;
+}
+.login h2,
+.loginModal h2 {
+  @apply flex gap-4 items-center justify-center mb-6 text-3xl font-bold;
+}
+.login h3,
+.loginModal h3 {
+  @apply py-2 text-xl font-bold md:text-2xl;
+}
+.login button,
+.loginModal button {
+  @apply flex items-center gap-4 justify-center hover:border-red-600 whitespace-nowrap rounded-md border border-[var(--background)] p-3 min-w-full;
+}

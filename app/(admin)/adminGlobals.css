@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #190b04;
+  --background: #f9eed7;
+  --background2: #f1e9b3;
+  --accent: #d13107;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #f9eed7;
+    --background: #190b04;
+    --background2: #0b0502;
+    --accent: #d13107;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(var(--background), var(--background2));
+}
+a:hover {
+  text-decoration: underline;
+}
+.widget {
+  @apply border border-dashed rounded-3xl p-6 min-h-fit;
+}
+main {
+  @apply p-6 flex-1;
+}
+header {
+  @apply flex py-6 pb-10 justify-between;
+}
+h2 {
+  @apply text-2xl font-semibold;
+}
+header a {
+  @apply flex justify-center items-center gap-2;
+}
+aside {
+  @apply flex flex-col p-6 bg-[var(--background2)] w-60;
+}
+aside h1 {
+  @apply flex gap-4 text-2xl font-semibold py-6 pb-10;
+}
+aside nav {
+  @apply flex-1;
+}
+aside ul {
+  @apply flex flex-col gap-3 list-inside list-disc;
+}
