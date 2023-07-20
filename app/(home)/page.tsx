@@ -54,7 +54,7 @@ export default async function Home() {
           </li>
         </ul>
       </main>
-      <footer>Auth Starter Template Footer.</footer>
+      <footer>NextAuth Starter Template Footer.</footer>
     </div>
   );
 }
