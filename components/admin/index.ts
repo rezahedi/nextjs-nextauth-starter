@@ -1,3 +1,4 @@
 import Sidebar from "./Sidebar";
+import MyWidget from "./MyWidget";
 
-export {Sidebar};
+export {Sidebar, MyWidget};

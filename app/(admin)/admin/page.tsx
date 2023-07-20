@@ -1,27 +1,15 @@
 import {getServerSession} from "next-auth/next";
-import Image from "next/image";
+import {MyWidget} from "@/components/admin";
 
 export default async function Home() {
   const session = await getServerSession();
 
   return (
     <div className="grid gap-6 grid-cols-2">
-      <MyWidgets title="Users" />
-      <MyWidgets title="Records" />
-      <MyWidgets title="Analytics" />
-      <MyWidgets title="Messages" />
+      <MyWidget title="Users" />
+      <MyWidget title="Records" />
+      <MyWidget title="Analytics" />
+      <MyWidget title="Messages" />
     </div>
   );
 }
-
-export const MyWidgets = ({title}: {title?: string}) => {
-  return (
-    <div className="widget">
-      {title || "Widget Title"}
-      <br />
-      <br />
-      <br />
-      <br />
-    </div>
-  );
-};
