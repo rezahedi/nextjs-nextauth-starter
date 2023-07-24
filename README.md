@@ -6,7 +6,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Create your .env file and fill it with your credentials, here are the required variables that I used in this project:
+
+```bash
+NEXTAUTH_URL="http://localhost:3000"
+GITHUB_CLIENT_ID=""
+GITHUB_SECRET_ID=""
+GOOGLE_CLIENT_ID=""
+GOOGLE_SECRET_ID=""
+NEXTAUTH_SECRET=""
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -18,7 +29,7 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project have two [Routing Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups) `(home)` and `(admin)` to have multiple root layouts for each. You can start editing the home page by modifying `app/(home)/page.tsx`. The page auto-updates as you edit the file.
+This project have two [Routing Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups) `(home)` and `(admin)` to have seperate root layouts for each. The `(home)` is for our root segment `/` that you can start editing the home page by modifying `app/(home)/page.tsx`. The `(admin)` is for our admin dashboard segment `/admin` that you can start editing the admin dashboard by modifying `app/(admin)/admin/page.tsx`.
 
 ## Learn More
 
