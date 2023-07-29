@@ -1,5 +1,6 @@
 import "./adminGlobals.css";
 import {getServerSession} from "next-auth/next";
+import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import Image from "next/image";
 import type {Metadata} from "next";
 import {Sidebar} from "@/components/admin";
@@ -14,7 +15,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
   // If session not exists, display access denied message
   if (!session) {
