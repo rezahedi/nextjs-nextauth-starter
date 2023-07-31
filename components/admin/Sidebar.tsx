@@ -14,6 +14,9 @@ const Sidebar = () => {
             <a href="/admin">Dashboard</a>
           </li>
           <li>
+            <a href="/admin/posts">Posts</a>
+          </li>
+          <li>
             <a href="/admin/users">Users</a>
           </li>
         </ul>
