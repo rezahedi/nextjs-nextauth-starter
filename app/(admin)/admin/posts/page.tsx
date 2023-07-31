@@ -39,7 +39,7 @@ export default async function Home() {
           <div key={post.id} className="contents">
             <div>{post.title}</div>
             <div>{post.published ? "Yes" : "No"}</div>
-            <div>{post.author.name}</div>
+            <div>{post.author?.name}</div>
           </div>
         ))}
       </div>
