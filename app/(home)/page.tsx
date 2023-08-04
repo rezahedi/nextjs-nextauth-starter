@@ -13,7 +13,7 @@ export default async function Home() {
           <a href="/">Home</a>
           <a href="/admin">Admin Dashboard</a>
           <a href="/admin/users">Manage Users</a>
-          <UserProfile session={session} />
+          <UserProfile />
         </nav>
       </header>
       <main>

@@ -1,15 +1,19 @@
 "use client";
-import { signOut } from "next-auth/react";
+import {signOut} from "next-auth/react";
 import Image from "next/image";
-import { Session } from "next-auth";
 import Link from "next/link";
+import {useSession} from "next-auth/react";
 
-export default function UserProfile({ session }: { session: Session | null }) {
+export default function UserProfile() {
+  const {data: session, status} = useSession();
+
   const handleSignOutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
     signOut();
   };
+
+  if (status === "loading") return <div>Loading ...</div>;
 
   if (!session) {
     return (
