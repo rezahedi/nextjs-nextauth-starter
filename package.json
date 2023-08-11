@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
-    "prisma": "^5.0.0",
     "@prisma/client": "^5.0.0",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
@@ -21,8 +20,10 @@
     "next": "13.4.9",
     "next-auth": "^4.22.1",
     "postcss": "8.4.26",
+    "prisma": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-loading-skeleton": "^3.3.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   }

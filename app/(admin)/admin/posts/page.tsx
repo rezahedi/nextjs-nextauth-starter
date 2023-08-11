@@ -21,11 +21,9 @@ export default async function Home() {
     },
   });
 
-  const handleCreateModal = () => {};
-
   return (
     <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-3 gap-3 widget">
+      <div className="myTable cols3">
         <div>
           <b>Title</b>
         </div>

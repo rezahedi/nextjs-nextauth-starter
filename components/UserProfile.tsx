@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import {useSession} from "next-auth/react";
 
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 export default function UserProfile() {
   const {data: session, status} = useSession();
 
@@ -13,7 +16,7 @@ export default function UserProfile() {
     signOut();
   };
 
-  if (status === "loading") return <div>Loading ...</div>;
+  if (status === "loading") return <Skeleton width={100} />;
 
   if (!session) {
     return (
