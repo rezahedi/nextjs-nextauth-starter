@@ -65,6 +65,6 @@ aside ul {
 .myForm textarea {
   @apply shadow appearance-none border rounded w-full py-2 px-3 text-[var(--background)] leading-tight;
 }
-.myForm button {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+.btn {
+  @apply max-w-fit bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
 }

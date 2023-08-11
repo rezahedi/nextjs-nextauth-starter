@@ -15,7 +15,9 @@ export default function CreateModal() {
           <textarea name="content" id="content" cols={30} rows={10}></textarea>
         </div>
         <div>
-          <button type="submit">Create</button>
+          <button className="btn" type="submit">
+            Create
+          </button>
         </div>
       </form>
     </Modal>

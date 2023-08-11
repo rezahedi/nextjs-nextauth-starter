@@ -24,7 +24,7 @@ export default async function Home() {
   const handleCreateModal = () => {};
 
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <div className="grid grid-cols-3 gap-3 widget">
         <div>
           <b>Title</b>
@@ -43,7 +43,9 @@ export default async function Home() {
           </div>
         ))}
       </div>
-      <Link href="/admin/posts/create">Create New Post</Link>
+      <Link href="/admin/posts/create" className="btn">
+        Create New Post
+      </Link>
     </div>
   );
 }
