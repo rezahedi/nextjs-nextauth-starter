@@ -3,7 +3,7 @@ import {Modal} from "@/components";
 
 export default function CreateModal() {
   return (
-    <Modal>
+    <Modal className="w-full max-w-md bg-[var(--background)] shadow-md rounded p-16">
       <h3 className="text-center text-lg">Create New Post</h3>
       <form className="myForm">
         <div>
