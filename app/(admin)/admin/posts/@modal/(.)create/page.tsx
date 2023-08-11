@@ -4,8 +4,8 @@ import {Modal} from "@/components";
 export default function CreateModal() {
   return (
     <Modal>
-      <h3>Create New Post</h3>
-      <form>
+      <h3 className="text-center text-lg">Create New Post</h3>
+      <form className="myForm">
         <div>
           <label htmlFor="title">Title</label>
           <input type="text" name="title" id="title" />

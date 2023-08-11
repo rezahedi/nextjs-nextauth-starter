@@ -26,9 +26,9 @@ async function handleCreatePost(data: FormData) {
 
 export default function CreatePage() {
   return (
-    <div>
-      <h3>Create New Post</h3>
-      <form action={handleCreatePost}>
+    <div className="max-w-md">
+      <h2>Create New Post</h2>
+      <form className="myForm" action={handleCreatePost}>
         <div>
           <label htmlFor="title">Title</label>
           <input type="text" name="title" id="title" />

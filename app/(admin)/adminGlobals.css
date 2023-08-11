@@ -52,3 +52,19 @@ aside nav {
 aside ul {
   @apply flex flex-col gap-3 list-inside list-disc;
 }
+.myForm {
+  @apply py-6;
+}
+.myForm div {
+  @apply mb-4;
+}
+.myForm label {
+  @apply block text-sm font-bold mb-2;
+}
+.myForm input,
+.myForm textarea {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-[var(--background)] leading-tight;
+}
+.myForm button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+}

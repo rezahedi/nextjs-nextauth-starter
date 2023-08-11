@@ -1,8 +1,8 @@
 "use client";
-import { useCallback, useRef, useEffect, MouseEventHandler } from "react";
-import { useRouter } from "next/navigation";
+import {useCallback, useRef, useEffect, MouseEventHandler} from "react";
+import {useRouter} from "next/navigation";
 
-export default function Modal({ children }: { children: React.ReactNode }) {
+export default function Modal({children}: {children: React.ReactNode}) {
   const overlay = useRef(null);
   const wrapper = useRef(null);
   const router = useRouter();
@@ -40,7 +40,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     >
       <div
         ref={wrapper}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-[var(--background)] shadow-md rounded p-16"
       >
         {children}
       </div>
