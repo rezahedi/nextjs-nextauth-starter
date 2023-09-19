@@ -43,7 +43,10 @@ header a {
   @apply flex justify-center items-center gap-2;
 }
 aside {
-  @apply flex flex-col p-6 bg-[var(--background2)] w-60;
+  @apply max-h-screen w-60 bg-[var(--background2)];
+}
+aside > div {
+  @apply fixed h-full flex flex-col p-6;
 }
 aside h1 {
   @apply flex gap-4 text-2xl font-semibold py-6 pb-10;
@@ -70,9 +73,15 @@ aside ul {
 .btn {
   @apply max-w-fit bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
 }
+.btn.danger {
+  @apply bg-red-500 hover:bg-red-700;
+}
+.btn.secondary {
+  @apply bg-gray-500 hover:bg-gray-700;
+}
 .myTable {
   @apply grid gap-3 widget;
 }
 .cols3 {
-  @apply grid-cols-3;
+  @apply grid-cols-4;
 }

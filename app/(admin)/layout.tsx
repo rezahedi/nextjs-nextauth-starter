@@ -21,7 +21,7 @@ export default async function RootLayout({
   if (!session) {
     return (
       <html lang="en">
-        <body className="flex h-screen items-center justify-center">
+        <body className="flex min-h-screen items-center justify-center">
           <div className="flex flex-col gap-2 items-center">
             <Image src="/stop.svg" alt="logo" width={56} height={56} />
             <h2 className="text-2xl font-semibold">Access Denied</h2>
@@ -38,7 +38,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="flex h-screen">
+      <body className="flex min-h-screen">
         <Sidebar />
         <main>
           <header>

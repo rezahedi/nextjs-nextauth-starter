@@ -14,14 +14,18 @@ export default function Loading() {
         <div>
           <b>Author</b>
         </div>
+        <div>
+          <b>Actions</b>
+        </div>
         <div className="contents">
           <SkeletonTheme
             baseColor="var(--background)"
             highlightColor="var(--backgroundLight)"
           >
-            <Skeleton containerClassName="gap-6" count={10} />
-            <Skeleton containerClassName="gap-6" count={10} />
-            <Skeleton containerClassName="gap-6" count={10} />
+            <Skeleton className="mb-6" height={30} count={10} />
+            <Skeleton className="mb-6" height={30} count={10} />
+            <Skeleton className="mb-6" height={30} count={10} />
+            <Skeleton className="mb-6" height={30} count={10} />
           </SkeletonTheme>
         </div>
       </div>
