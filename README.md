@@ -31,6 +31,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project have two [Routing Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups) `(home)` and `(admin)` to have seperate root layouts for each. The `(home)` is for our root segment `/` that you can start editing the home page by modifying `app/(home)/page.tsx`. The `(admin)` is for our admin dashboard segment `/admin` that you can start editing the admin dashboard by modifying `app/(admin)/admin/page.tsx`.
 
+Here a screenshot of admin page with CRUD functions under `/posts` folder, by reviewing the codes you can learn more about how to use server actions in client side, how to create modal and forms and much more:
+
+![Admin CRUD section with edit page opened as a modal](https://github.com/rezahedi/nextjs-nextauth-starter/blob/main/public/Screenshot_2023-09-18_180914.png)
+
 ## Learn More
 
 This project build by [Next.js 13](https://nextjs.org/docs/app) [APP Router](https://nextjs.org/docs/app/building-your-application/routing#the-app-router), using [NextAuth](https://next-auth.js.org/getting-started/introduction) for authentication, [Modal Intercepting Routing](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes) for `/login` modal or route, and styled by Tailwind. This project also included a sample protected route and sub-routes too, It is useful for making admin dashboard. I used [Route Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups) to make multiple root layouts for each of home page and admin dashboard separatly.
