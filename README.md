@@ -6,25 +6,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Create your .env file and fill it with your credentials, here are the required variables that I used in this project:
+Create your .env file as the following or from the `.env.example` and fill it with your credentials, in the case of database I used Postgres hosted on Vercel with Prisma ORM, setup your database and fill the `POSTGRES_PRISMA_URL` and `POSTGRES_URL_NON_POOLING` with your database credentials.
 
 ```bash
-NEXTAUTH_URL="http://localhost:3000"
+# Only required for localhost
+NEXTAUTH_URL=http://localhost:3000
+# Only for production – generate one here: https://generate-secret.vercel.app/32
+NEXTAUTH_SECRET=""
 GITHUB_CLIENT_ID=""
 GITHUB_SECRET_ID=""
 GOOGLE_CLIENT_ID=""
 GOOGLE_SECRET_ID=""
-NEXTAUTH_SECRET=""
+POSTGRES_PRISMA_URL=""
+POSTGRES_URL_NON_POOLING=""
 ```
 
-Then, run the development server:
+Then, install all packages and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
