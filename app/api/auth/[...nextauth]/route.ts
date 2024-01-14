@@ -3,11 +3,20 @@ import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import {PrismaAdapter} from "@next-auth/prisma-adapter";
 import {PrismaClient} from "@prisma/client";
-import {Session} from "inspector";
+
+if (
+  !process.env.GITHUB_CLIENT_ID ||
+  !process.env.GITHUB_SECRET_ID ||
+  !process.env.GOOGLE_CLIENT_ID ||
+  !process.env.GOOGLE_SECRET_ID ||
+  !process.env.NEXTAUTH_SECRET
+) {
+  throw new Error("Auth required env variables are not set");
+}
 
 const prisma = new PrismaClient();
 
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   // Configure one or more authentication providers
   providers: [
