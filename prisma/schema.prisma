@@ -28,6 +28,8 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+
+  @@map("nextauthstarter_accounts")
 }
 
 model Session {
@@ -36,6 +38,8 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("nextauthstarter_sessions")
 }
 
 model User {
@@ -48,7 +52,9 @@ model User {
   sessions      Session[]
 
   posts         Post[]
-  @@map(name: "users")
+
+  // @@map(name: "users")
+  @@map("nextauthstarter_users")
 }
 
 model VerificationToken {
@@ -57,6 +63,8 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+
+  @@map("nextauthstarter_verificationtokens")
 }
 
 model Post {
@@ -66,5 +74,7 @@ model Post {
   published Boolean    @default(false)
   author    User?      @relation(fields: [authorId], references: [id])
   authorId  String?
+
+  @@map("nextauthstarter_posts")
 }
 
