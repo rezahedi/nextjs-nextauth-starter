@@ -7,9 +7,6 @@ const nextConfig = {
       "vercel.com",
     ],
   },
-  experimental: {
-    serverActions: true,
-  },
 };
 
 module.exports = nextConfig;
