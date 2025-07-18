@@ -25,9 +25,6 @@ body {
 a:hover {
   text-decoration: underline;
 }
-.widget {
-  @apply border border-dashed rounded-3xl p-6 min-h-fit;
-}
 main {
   @apply p-6 flex-1;
 }
@@ -78,7 +75,7 @@ aside ul {
   @apply bg-gray-500 hover:bg-gray-700;
 }
 .myTable {
-  @apply grid gap-3 widget;
+  @apply grid gap-3 border border-dashed rounded-3xl p-6 min-h-fit;
 }
 .cols3 {
   @apply grid-cols-4;
