@@ -3,9 +3,10 @@ import {CancelButton} from "@/components/admin";
 import Modal from "@/components/Modal";
 import MyFormSubmit from "./MyFormSubmit";
 
-export default async function Home({params}: {params: {id: string}}) {
+export default async function Home({params}: {params: Promise<{id: string}>}) {
+  const {id: postId} = await params;
   // await readpost and fetch error
-  const post = await readPost(params.id);
+  const post = await readPost(postId);
 
   return (
     <Modal className="w-full max-w-xl bg-[var(--background)] shadow-md rounded p-16">
