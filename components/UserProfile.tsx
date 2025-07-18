@@ -39,7 +39,7 @@ export default function UserProfile() {
   }
 
   return (
-    <a
+    <Link
       href="/api/auth/signout"
       title="Click to SignOut"
       onClick={handleSignOutClick}
@@ -56,6 +56,6 @@ export default function UserProfile() {
         className="rounded"
       />
       {session?.user?.name}
-    </a>
+    </Link>
   );
 }

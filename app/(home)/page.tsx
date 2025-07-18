@@ -1,6 +1,7 @@
 import {getServerSession} from "next-auth/next";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import UserProfile from "@/components/UserProfile";
+import Link from "next/link";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -10,9 +11,9 @@ export default async function Home() {
       <header>
         <h1>Auth Starter Template</h1>
         <nav>
-          <a href="/">Home</a>
-          <a href="/admin">Admin Dashboard</a>
-          <a href="/admin/users">Manage Users</a>
+          <Link href="/">Home</Link>
+          <Link href="/admin">Admin Dashboard</Link>
+          <Link href="/admin/users">Manage Users</Link>
           <UserProfile />
         </nav>
       </header>

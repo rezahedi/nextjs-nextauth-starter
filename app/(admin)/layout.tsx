@@ -2,6 +2,7 @@ import "./adminGlobals.css";
 import {getServerSession} from "next-auth/next";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import Image from "next/image";
+import Link from "next/link";
 import type {Metadata} from "next";
 import {Sidebar} from "@/components/admin";
 
@@ -28,7 +29,7 @@ export default async function RootLayout({
             <p>You do not have permission to view this page.</p>
             <p>
               This route protected, Please{" "}
-              <a href="/api/auth/signin?callbackUrl=/admin">login</a> first.
+              <Link href="/api/auth/signin?callbackUrl=/admin">login</Link> first.
             </p>
           </div>
         </body>
@@ -43,7 +44,7 @@ export default async function RootLayout({
         <main>
           <header>
             <h2>Admin Dashboard</h2>
-            <a href="/api/auth/signout">
+            <Link href="/api/auth/signout">
               {session?.user && session?.user?.name}
               <Image
                 src={session?.user?.image || "/user.svg"}
@@ -52,7 +53,7 @@ export default async function RootLayout({
                 height={36}
                 className="rounded-full"
               />
-            </a>
+            </Link>
           </header>
           {children}
         </main>
