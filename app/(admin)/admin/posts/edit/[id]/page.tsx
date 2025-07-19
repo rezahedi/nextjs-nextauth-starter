@@ -1,9 +1,10 @@
 import {readPost, updatePostWithRedirect} from "../../actions";
 import {CancelButton} from "@/components/admin";
 
-export default async function Home({params}: {params: {id: string}}) {
+export default async function Home({params}: {params: Promise<{id: string}>}) {
+  const {id: postId} = await params;
   // await readpost and fetch error
-  const post = await readPost(params.id);
+  const post = await readPost(postId);
 
   return (
     <div>
